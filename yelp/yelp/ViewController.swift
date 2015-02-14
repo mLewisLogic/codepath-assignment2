@@ -10,8 +10,10 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let cellNibName = "RestaurantTableViewCell.xib"
+    let cellNibName = "RestaurantTableViewCell"
     let cellIdentifier = "com.machel.restaurant-cell"
+
+    let client: YelpClient!
 
 
     @IBOutlet weak var restaurantTableView: UITableView!
@@ -30,6 +32,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             forCellReuseIdentifier: cellIdentifier
         )
 
+        // Set up utomatic row height
+        self.restaurantTableView.rowHeight = UITableViewAutomaticDimension
+
+        search("Thai")
         self.restaurantTableView.reloadData()
     }
 
@@ -48,5 +54,24 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
 
+
+    private func search(term: String) {
+        if self.client == nil {
+            self.client = YelpClient()
+        }
+
+        self.client.searchWithTerm(
+            term,
+            success: {
+                (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+                    println(response)
+            },
+            error: {
+                (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                    println(error)
+            }
+        )
+
+    }
 }
 

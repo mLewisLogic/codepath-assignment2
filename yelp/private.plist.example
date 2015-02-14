@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Yelp</key>
+    <dict>
+        <key>consumer_key</key>
+        <string>CONSUMER_KEY</string>
+        <key>consumer_secret</key>
+        <string>CONSUMER_SECRET</string>
+        <key>token</key>
+        <string>TOKEN</string>
+        <key>token_secret</key>
+        <string>TOKEN_SECRET</string>
+    </dict>
+</dict>
+</plist>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JUr-Tt-rhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bNn-ri-xT7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Restaurants View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" userLabel="Main View Controller" customClass="MainViewController" customModule="yelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RestaurantsViewController" customModule="yelp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,43 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-IW-gnX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QHy-fz-pWl" userLabel="Restaurants Table View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Gh5-pk-rgo"/>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="7iK-lA-rrj"/>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="GQH-Lf-zOh"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="WPq-hr-IIg"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QHy-fz-pWl" secondAttribute="bottom" id="7Wv-X2-5ot"/>
+                            <constraint firstItem="QHy-fz-pWl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="dnK-SH-TsF"/>
+                            <constraint firstAttribute="trailing" secondItem="QHy-fz-pWl" secondAttribute="trailing" id="f9w-SW-gCx"/>
+                            <constraint firstItem="QHy-fz-pWl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tOb-nq-YxK"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AnH-r0-K41"/>
+                    <navigationItem key="navigationItem" id="wHs-00-JIG"/>
                     <connections>
-                        <outlet property="restaurantTableView" destination="rpz-IW-gnX" id="xAq-ZB-bOX"/>
+                        <outlet property="restaurantTableView" destination="QHy-fz-pWl" id="OJA-2p-CVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="406"/>
+            <point key="canvasLocation" x="549" y="337"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="YCy-Yk-mVc">
+        <scene sceneID="k4a-C7-5id">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JUr-Tt-rhd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bNn-ri-xT7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dea-6z-TAT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nzm-hX-wHa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="QlF-yh-uhe"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="zac-LL-q4H"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MWt-RQ-faP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vfw-EJ-ERl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="406"/>
+            <point key="canvasLocation" x="162" y="337"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

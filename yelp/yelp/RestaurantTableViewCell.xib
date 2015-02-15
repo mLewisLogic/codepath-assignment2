@@ -23,11 +23,11 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jct-eL-Xci" userLabel="Restaurant Name">
                         <rect key="frame" x="102" y="8" width="319" height="19.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.23 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcX-FE-AmE" userLabel="Distance">
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.23 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcX-FE-AmE" userLabel="Distance">
                         <rect key="frame" x="425" y="8" width="54" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="54" id="KPy-bD-N2D"/>
@@ -37,7 +37,7 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehp-dQ-4gV" userLabel="Price">
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehp-dQ-4gV" userLabel="Price">
                         <rect key="frame" x="425" y="29" width="54" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="8Ax-32-55d"/>
@@ -69,7 +69,7 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai, Italian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgg-mf-OwS" userLabel="Cuisine Type">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai, Italian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgg-mf-OwS" userLabel="Categories">
                         <rect key="frame" x="102" y="69" width="377" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="qLM-k4-eGo"/>
@@ -103,6 +103,16 @@
                     <constraint firstItem="FcX-FE-AmE" firstAttribute="trailing" secondItem="s1w-ap-iHm" secondAttribute="trailingMargin" id="yoi-LJ-GCj"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="D4c-7n-xYK" id="qAu-H0-plG"/>
+                <outlet property="categoriesLabel" destination="cgg-mf-OwS" id="Yic-Fj-0XF"/>
+                <outlet property="distanceLabel" destination="FcX-FE-AmE" id="4um-W0-xTu"/>
+                <outlet property="nameLabel" destination="Jct-eL-Xci" id="wA0-HV-eUK"/>
+                <outlet property="numReviewsLabel" destination="0Te-D5-33n" id="oR8-Ws-mZO"/>
+                <outlet property="photoImageView" destination="dhT-5J-2El" id="Bxr-NJ-TZg"/>
+                <outlet property="priceLabel" destination="Ehp-dQ-4gV" id="43o-XB-7nG"/>
+                <outlet property="starsImageView" destination="Yak-sZ-MHK" id="nSX-sk-Nye"/>
+            </connections>
             <point key="canvasLocation" x="59.5" y="299.5"/>
         </tableViewCell>
     </objects>

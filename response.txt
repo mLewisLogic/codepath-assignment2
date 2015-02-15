@@ -1,0 +1,53 @@
+{
+    businesses =     (
+                {
+            categories =             (
+                                (
+                    Thai,
+                    thai
+                )
+            );
+            "display_phone" = "+1-415-931-6917";
+            id = "lers-ros-thai-san-francisco";
+            "image_url" = "http://s3-media4.fl.yelpcdn.com/bphoto/fqSKAzGwk8un33niJvxnyw/ms.jpg";
+            "is_claimed" = 0;
+            "is_closed" = 0;
+            location =             {
+                address =                 (
+                    "730 Larkin St"
+                );
+                city = "San Francisco";
+                coordinate =                 {
+                    latitude = "37.784702";
+                    longitude = "-122.417564";
+                };
+                "country_code" = US;
+                "cross_streets" = "Olive St & Ellis St";
+                "display_address" =                 (
+                    "730 Larkin St",
+                    Tenderloin,
+                    "San Francisco, CA 94109"
+                );
+                "geo_accuracy" = 8;
+                neighborhoods =                 (
+                    Tenderloin
+                );
+                "postal_code" = 94109;
+                "state_code" = CA;
+            };
+            "menu_date_updated" = 1387658025;
+            "menu_provider" = "single_platform";
+            "mobile_url" = "http://m.yelp.com/biz/lers-ros-thai-san-francisco";
+            name = "Lers Ros Thai";
+            phone = 4159316917;
+            rating = 4;
+            "rating_img_url" = "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png";
+            "rating_img_url_large" = "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png";
+            "rating_img_url_small" = "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png";
+            "review_count" = 1413;
+            "snippet_image_url" = "http://s3-media3.fl.yelpcdn.com/photo/1NrgwG7N_WmVoN0no7E_LA/ms.jpg";
+            "snippet_text" = "Came here for a work luncheon. We had reservations for 7 at noon. We arrived a little early and the place was quite empty. By the time 12:15 rolled around,...";
+            url = "http://www.yelp.com/biz/lers-ros-thai-san-francisco";
+        }
+    );
+}

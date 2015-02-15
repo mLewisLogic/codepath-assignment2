@@ -6,6 +6,12 @@
 // project.
 
 
+// AFNetworking
+#define COCOAPODS_POD_AVAILABLE_AFNetworking
+#define COCOAPODS_VERSION_MAJOR_AFNetworking 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking 1
+
 // AFNetworking/NSURLConnection
 #define COCOAPODS_POD_AVAILABLE_AFNetworking_NSURLConnection
 #define COCOAPODS_VERSION_MAJOR_AFNetworking_NSURLConnection 2
@@ -36,21 +42,15 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_Serialization 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_Serialization 1
 
+// AFNetworking/UIKit
+#define COCOAPODS_POD_AVAILABLE_AFNetworking_UIKit
+#define COCOAPODS_VERSION_MAJOR_AFNetworking_UIKit 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
+
 // BDBOAuth1Manager
 #define COCOAPODS_POD_AVAILABLE_BDBOAuth1Manager
 #define COCOAPODS_VERSION_MAJOR_BDBOAuth1Manager 1
 #define COCOAPODS_VERSION_MINOR_BDBOAuth1Manager 5
 #define COCOAPODS_VERSION_PATCH_BDBOAuth1Manager 0
-
-// SVProgressHUD
-#define COCOAPODS_POD_AVAILABLE_SVProgressHUD
-#define COCOAPODS_VERSION_MAJOR_SVProgressHUD 1
-#define COCOAPODS_VERSION_MINOR_SVProgressHUD 1
-#define COCOAPODS_VERSION_PATCH_SVProgressHUD 2
-
-// SwiftyJSON
-#define COCOAPODS_POD_AVAILABLE_SwiftyJSON
-#define COCOAPODS_VERSION_MAJOR_SwiftyJSON 2
-#define COCOAPODS_VERSION_MINOR_SwiftyJSON 1
-#define COCOAPODS_VERSION_PATCH_SwiftyJSON 3
 

@@ -28,7 +28,8 @@ Time spent: `11`
 - [ ] Custom UISwitch on filters page.
 
 
-Notes:
+### Notes
+
 The filters page is pretty rough and not fully implemented. Pricing information is not displayed because it's not returned by the API. The filters are passed down to the YelpClient, but aren't translated into query params. This is because the API docs didn't provide a mechanism for searching by price or business features, which Yelp's API specifically do not return.
 
 ### Walkthrough

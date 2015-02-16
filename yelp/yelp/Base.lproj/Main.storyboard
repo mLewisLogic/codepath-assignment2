@@ -4,6 +4,52 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="0Jy-6f-pDr">
+            <objects>
+                <viewController id="8LZ-6m-A3T" customClass="SettingsViewController" customModule="yelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hjb-Zo-ZPx"/>
+                        <viewControllerLayoutGuide type="bottom" id="GBN-4N-6XN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DYN-10-2x3" userLabel="Outer View">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-rx-KST" userLabel="Settings Table View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8LZ-6m-A3T" id="RJD-bR-9d3"/>
+                                    <outlet property="delegate" destination="8LZ-6m-A3T" id="kzs-gk-cXc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eg6-rx-KST" firstAttribute="bottom" secondItem="GBN-4N-6XN" secondAttribute="top" id="3QA-h2-u3T"/>
+                            <constraint firstAttribute="width" secondItem="eg6-rx-KST" secondAttribute="width" id="E75-vb-9V5"/>
+                            <constraint firstItem="eg6-rx-KST" firstAttribute="top" secondItem="hjb-Zo-ZPx" secondAttribute="bottom" id="GSr-mW-pUV"/>
+                            <constraint firstItem="eg6-rx-KST" firstAttribute="leading" secondItem="DYN-10-2x3" secondAttribute="leading" id="rh8-vD-Tke"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="Chi-Yx-XUP">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="SVC-ko-Nh0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="vh3-8F-ooO">
+                            <connections>
+                                <action selector="searchButtonActivated:" destination="8LZ-6m-A3T" id="acY-P3-zrT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="settingsTableView" destination="eg6-rx-KST" id="3hX-xN-fxm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ca3-ub-RtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="-303"/>
+        </scene>
         <!--Restaurants View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -13,7 +59,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QHy-fz-pWl" userLabel="Restaurants Table View">
@@ -27,13 +73,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QHy-fz-pWl" secondAttribute="bottom" id="7Wv-X2-5ot"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QHy-fz-pWl" secondAttribute="bottom" constant="-64" id="7Wv-X2-5ot"/>
                             <constraint firstItem="QHy-fz-pWl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="dnK-SH-TsF"/>
                             <constraint firstAttribute="trailing" secondItem="QHy-fz-pWl" secondAttribute="trailing" id="f9w-SW-gCx"/>
                             <constraint firstItem="QHy-fz-pWl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tOb-nq-YxK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wHs-00-JIG"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="wHs-00-JIG">
+                        <barButtonItem key="leftBarButtonItem" title="Filters" id="7ma-0g-YDf">
+                            <connections>
+                                <segue destination="R3s-1a-dL2" kind="modal" identifier="com.machel.settings-segue" id="g1e-XB-J7t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="restaurantTableView" destination="QHy-fz-pWl" id="OJA-2p-CVa"/>
                     </connections>
@@ -46,6 +99,7 @@
         <scene sceneID="k4a-C7-5id">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bNn-ri-xT7" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nzm-hX-wHa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -59,6 +113,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfw-EJ-ERl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dXj-DF-mHL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R3s-1a-dL2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPO-VE-7t6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8LZ-6m-A3T" kind="relationship" relationship="rootViewController" id="tD7-RB-4j1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRb-Zc-Ydi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="-303"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

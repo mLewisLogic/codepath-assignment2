@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2706BA5F1A913BFE0097D091 /* SelectorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2706BA5E1A913BFE0097D091 /* SelectorTableViewCell.xib */; };
+		2706BA611A913D660097D091 /* SelectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BA601A913D660097D091 /* SelectorTableViewCell.swift */; };
+		274BC3B71A91438F00595C2F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BC3B61A91438F00595C2F /* SettingsViewController.swift */; };
+		274BC3B91A916DDF00595C2F /* PriceSelectorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274BC3B81A916DDF00595C2F /* PriceSelectorTableViewCell.xib */; };
+		274BC3BB1A916EAA00595C2F /* PriceSelectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BC3BA1A916EAA00595C2F /* PriceSelectorTableViewCell.swift */; };
 		27BCA0791A90122B0062BA19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCA0781A90122B0062BA19 /* AppDelegate.swift */; };
 		27BCA07E1A90122B0062BA19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BCA07C1A90122B0062BA19 /* Main.storyboard */; };
 		27BCA0801A90122B0062BA19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BCA07F1A90122B0062BA19 /* Images.xcassets */; };
@@ -33,6 +38,12 @@
 
 /* Begin PBXFileReference section */
 		174D015EB1F6650332F49242 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2706BA5E1A913BFE0097D091 /* SelectorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectorTableViewCell.xib; sourceTree = "<group>"; };
+		2706BA601A913D660097D091 /* SelectorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorTableViewCell.swift; sourceTree = "<group>"; };
+		274BC3B61A91438F00595C2F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		274BC3B81A916DDF00595C2F /* PriceSelectorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceSelectorTableViewCell.xib; sourceTree = "<group>"; };
+		274BC3BA1A916EAA00595C2F /* PriceSelectorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSelectorTableViewCell.swift; sourceTree = "<group>"; };
+		276BC2FD1A912EBC00DA69C7 /* scratch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = scratch.playground; sourceTree = "<group>"; };
 		27BCA0731A90122B0062BA19 /* yelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BCA0771A90122B0062BA19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27BCA0781A90122B0062BA19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +95,7 @@
 		27BCA06A1A90122B0062BA19 = {
 			isa = PBXGroup;
 			children = (
+				276BC2FD1A912EBC00DA69C7 /* scratch.playground */,
 				27BCA0A41A9013A10062BA19 /* private.plist */,
 				27BCA0A51A9013A10062BA19 /* private.plist.example */,
 				27BCA0751A90122B0062BA19 /* yelp */,
@@ -146,8 +158,11 @@
 		27BCA0991A9012860062BA19 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				27BCA0A11A90133F0062BA19 /* RestaurantTableViewCell.swift */,
 				27BCA09A1A9012860062BA19 /* RestaurantsViewController.swift */,
+				27BCA0A11A90133F0062BA19 /* RestaurantTableViewCell.swift */,
+				274BC3B61A91438F00595C2F /* SettingsViewController.swift */,
+				274BC3BA1A916EAA00595C2F /* PriceSelectorTableViewCell.swift */,
+				2706BA601A913D660097D091 /* SelectorTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,7 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				27BCA0811A90122B0062BA19 /* LaunchScreen.xib */,
+				274BC3B81A916DDF00595C2F /* PriceSelectorTableViewCell.xib */,
 				27BCA09F1A9013120062BA19 /* RestaurantTableViewCell.xib */,
+				2706BA5E1A913BFE0097D091 /* SelectorTableViewCell.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -251,9 +268,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274BC3B91A916DDF00595C2F /* PriceSelectorTableViewCell.xib in Resources */,
 				27BCA0A01A9013120062BA19 /* RestaurantTableViewCell.xib in Resources */,
 				27BCA07E1A90122B0062BA19 /* Main.storyboard in Resources */,
 				27BCA0831A90122B0062BA19 /* LaunchScreen.xib in Resources */,
+				2706BA5F1A913BFE0097D091 /* SelectorTableViewCell.xib in Resources */,
 				27BCA0801A90122B0062BA19 /* Images.xcassets in Resources */,
 				27BCA0A71A9013A10062BA19 /* private.plist.example in Resources */,
 				27BCA0A61A9013A10062BA19 /* private.plist in Resources */,
@@ -309,8 +328,11 @@
 			files = (
 				27BCA0A21A90133F0062BA19 /* RestaurantTableViewCell.swift in Sources */,
 				27BCA09B1A9012860062BA19 /* RestaurantsViewController.swift in Sources */,
+				2706BA611A913D660097D091 /* SelectorTableViewCell.swift in Sources */,
 				27BCA09E1A9012FB0062BA19 /* YelpClient.swift in Sources */,
 				27BCA0791A90122B0062BA19 /* AppDelegate.swift in Sources */,
+				274BC3B71A91438F00595C2F /* SettingsViewController.swift in Sources */,
+				274BC3BB1A916EAA00595C2F /* PriceSelectorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

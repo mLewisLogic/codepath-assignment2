@@ -32,6 +32,10 @@ Time spent: `11`
 
 The filters page is pretty rough and not fully implemented. Pricing information is not displayed because it's not returned by the API. The filters are passed down to the YelpClient, but aren't translated into query params. This is because the API docs didn't provide a mechanism for searching by price or business features, which Yelp's API specifically do not return.
 
+Unfortunately, a lot of time was wasted dealing with CocoaPods issues, and then auto-layout issues in an ill-fated attempt to use a UIScrollView in the settings controller.
+
+I'm also not happy with the way that the settings filter configuration is set up. Ideally it would have been more data driven, with a consistent dictionary map for both view construction, and value storage/passing. In the end, I started running out of time, and just hacked it together as is in order to connect all of the dots.
+
 ### Walkthrough
 
 ![Video Walkthrough](demo.gif)
